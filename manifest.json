@@ -1,0 +1,25 @@
+{
+    "name": "Delete Twitter External Links",
+    "version": "1.0",
+    "description": "Deletes all external links from Twitter as you scroll your feed. Made for the absolute degenerates that can't handle not clicking on wallet drainers.",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": ["https://twitter.com/*"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "128": "images/icon128.png"
+    },
+
+    "manifest_version": 3
+}
